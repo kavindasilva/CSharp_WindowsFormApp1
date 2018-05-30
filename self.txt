@@ -1,0 +1,8 @@
+C# Windows Apps
+
+No getters and setters like in java
+
+this.dispose(); calls de-constructor
+
+
+

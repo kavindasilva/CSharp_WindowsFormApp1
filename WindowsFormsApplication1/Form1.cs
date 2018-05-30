@@ -38,6 +38,8 @@ namespace WindowsFormsApplication1
 
         private void btnApp1C3_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(sender.ToString()); MessageBox.Show(e.ToString());
+
             if (enabledBtns)
             {
                 this.btnApp1.Enabled = false;
@@ -56,7 +58,17 @@ namespace WindowsFormsApplication1
 
         private void btnApp1C2_Click(object sender, EventArgs e)
         {
+            new app1(this).Show();
+        }
 
+        public void setlable3(int num)
+        {
+            this.lblBtn3.Text = num.ToString();
+        }
+
+        private void btndb1_Click(object sender, EventArgs e)
+        {
+            new db2().Show();
         }
     }
 }

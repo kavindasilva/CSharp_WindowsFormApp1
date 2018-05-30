@@ -32,12 +32,12 @@
             this.btnApp1C3 = new System.Windows.Forms.Button();
             this.btnApp1C2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btndb1 = new System.Windows.Forms.Button();
             this.lblBtn1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblBtn3 = new System.Windows.Forms.Label();
+            this.lblBtn2 = new System.Windows.Forms.Label();
+            this.lblBtn4 = new System.Windows.Forms.Label();
+            this.lblBtn5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnApp1
@@ -79,66 +79,67 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btndb1
             // 
-            this.button2.Location = new System.Drawing.Point(302, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btndb1.Location = new System.Drawing.Point(302, 172);
+            this.btndb1.Name = "btndb1";
+            this.btndb1.Size = new System.Drawing.Size(75, 23);
+            this.btndb1.TabIndex = 4;
+            this.btndb1.Text = "DB";
+            this.btndb1.UseVisualStyleBackColor = true;
+            this.btndb1.Click += new System.EventHandler(this.btndb1_Click);
             // 
             // lblBtn1
             // 
             this.lblBtn1.Location = new System.Drawing.Point(383, 43);
             this.lblBtn1.Name = "lblBtn1";
-            this.lblBtn1.Size = new System.Drawing.Size(189, 23);
+            this.lblBtn1.Size = new System.Drawing.Size(216, 23);
             this.lblBtn1.TabIndex = 5;
             this.lblBtn1.Text = "Open app1 in a window. returns nothing";
             // 
-            // label1
+            // lblBtn3
             // 
-            this.label1.Location = new System.Drawing.Point(383, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 23);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "disables \'App1\', \'App1-c2\' buttons";
+            this.lblBtn3.Location = new System.Drawing.Point(383, 129);
+            this.lblBtn3.Name = "lblBtn3";
+            this.lblBtn3.Size = new System.Drawing.Size(189, 23);
+            this.lblBtn3.TabIndex = 6;
+            this.lblBtn3.Text = "disables \'App1\', \'App1-c2\' buttons";
             // 
-            // label2
+            // lblBtn2
             // 
-            this.label2.Location = new System.Drawing.Point(383, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 23);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Open app1 in a window. returns nothing";
+            this.lblBtn2.Location = new System.Drawing.Point(383, 87);
+            this.lblBtn2.Name = "lblBtn2";
+            this.lblBtn2.Size = new System.Drawing.Size(259, 23);
+            this.lblBtn2.TabIndex = 7;
+            this.lblBtn2.Text = "Open app1 in a window. returns a random number";
             // 
-            // label3
+            // lblBtn4
             // 
-            this.label3.Location = new System.Drawing.Point(383, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Open app1 in a window. returns nothing";
+            this.lblBtn4.Location = new System.Drawing.Point(383, 172);
+            this.lblBtn4.Name = "lblBtn4";
+            this.lblBtn4.Size = new System.Drawing.Size(189, 23);
+            this.lblBtn4.TabIndex = 8;
+            this.lblBtn4.Text = "View DB";
             // 
-            // label4
+            // lblBtn5
             // 
-            this.label4.Location = new System.Drawing.Point(383, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Open app1 in a window. returns nothing";
+            this.lblBtn5.Location = new System.Drawing.Point(383, 216);
+            this.lblBtn5.Name = "lblBtn5";
+            this.lblBtn5.Size = new System.Drawing.Size(189, 23);
+            this.lblBtn5.TabIndex = 9;
+            this.lblBtn5.Text = "Open app1 in a window. returns nothing";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 273);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblBtn5);
+            this.Controls.Add(this.lblBtn4);
+            this.Controls.Add(this.lblBtn2);
+            this.Controls.Add(this.lblBtn3);
             this.Controls.Add(this.lblBtn1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btndb1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnApp1C2);
             this.Controls.Add(this.btnApp1C3);
@@ -157,12 +158,12 @@
         private System.Windows.Forms.Button btnApp1C3;
         private System.Windows.Forms.Button btnApp1C2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btndb1;
         private System.Windows.Forms.Label lblBtn1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBtn3;
+        private System.Windows.Forms.Label lblBtn2;
+        private System.Windows.Forms.Label lblBtn4;
+        private System.Windows.Forms.Label lblBtn5;
     }
 }
 
