@@ -34,11 +34,14 @@
             // 
             // dgv1
             // 
+            this.dgv1.AllowUserToResizeRows = false;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1.Location = new System.Drawing.Point(28, 38);
+            this.dgv1.MultiSelect = false;
             this.dgv1.Name = "dgv1";
             this.dgv1.Size = new System.Drawing.Size(827, 212);
             this.dgv1.TabIndex = 0;
+            
             // 
             // db2
             // 
