@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
     public partial class app1 : Form
     {
         private Form1 parentName;
+        private int randomNum=0;
         //public int _sa;
         //private Form1 parname;
 
@@ -20,16 +21,30 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        //this method disables the parent, and enables after closing the child________
         public app1(Form1 callingFrom, int code)
         {
             InitializeComponent();
-
             //Console.Write("Constructor 2 called");
-            parentName = callingFrom;
-            parentName.Enabled = false;
+            disableParent(callingFrom); //returns bool
+             
+        } //end of app1(Form1 callingFrom, int code)___________________________________
+
+
+        // this method returns[actually passing] data to the parent form________________
+        public app1(Form1 callingFrom)
+        {
+            InitializeComponent();
+            disableParent(callingFrom);
+            Random rnd = new Random();
+            randomNum= rnd.Next(0, 15);
+
+            this.lblRand1.Text = randomNum.ToString();
+            callingFrom.setlable3(randomNum);
             
-            
-        }
+            //this.Dispose(true);
+            //return randomNum;
+        } //end of app1(Form1 callingFrom)________________________________________________
 
         public app1(string pname)
         {
@@ -48,9 +63,18 @@ namespace WindowsFormsApplication1
         private void btnClose_Click(object sender, EventArgs e)
         {
             //if this.close() come here, Form1 is not focussed. But works as expected
-            parentName.Enabled = true;
-            this.Close();
+            this.Dispose();
             //this.Dispose(true);
+        }
+
+        private bool disableParent(Form1 callingFrom)
+        {
+            bool res = false;
+
+            parentName = callingFrom; //get parent element
+            parentName.Enabled = false; //disable the parent
+            res = true; 
+            return res; //return success
         }
     }
 }
