@@ -41,7 +41,7 @@
             this.dgv1.Name = "dgv1";
             this.dgv1.Size = new System.Drawing.Size(827, 212);
             this.dgv1.TabIndex = 0;
-            
+            this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
             // 
             // db2
             // 

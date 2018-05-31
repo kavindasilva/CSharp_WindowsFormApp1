@@ -132,8 +132,8 @@ namespace WindowsFormsApplication1
             {
                 Console.WriteLine(e);
                 MessageBox.Show(e.ToString());
-            //  Response.Write(e.Message);
-            //  Response.End();
+                //  Response.Write(e.Message);
+                //  Response.End();
             }
             /*finally
             {
@@ -142,6 +142,34 @@ namespace WindowsFormsApplication1
             }*/
 
         } //end of connect()___________________________________
+
+        private void dgv1_CellContentClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("S");
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenu m = new ContextMenu();
+                m.MenuItems.Add(new MenuItem("Cut"));
+                m.MenuItems.Add(new MenuItem("Copy"));
+                m.MenuItems.Add(new MenuItem("Paste"));
+
+                int currentMouseOverRow = dgv1.HitTest(e.X, e.Y).RowIndex;
+
+                if (currentMouseOverRow >= 0)
+                {
+                    m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                }
+
+                m.Show(dgv1, new Point(e.X, e.Y));
+
+            }
+        }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("DD");
+        }
+
     } //end of db2 class_______________________________________
 
 
