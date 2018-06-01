@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0B3E5F7C-2D02-4592-A8DD-730070065554}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication1</RootNamespace>
     <AssemblyName>WindowsFormsApplication1</AssemblyName>
@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +61,13 @@
     <Compile Include="db2.Designer.cs">
       <DependentUpon>db2.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbops2\dbedit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbops2\dbedit2.Designer.cs">
+      <DependentUpon>dbedit2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ext1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="db2.resx">
       <DependentUpon>db2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbops2\dbedit2.resx">
+      <DependentUpon>dbedit2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

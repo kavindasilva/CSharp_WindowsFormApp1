@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+//using System.Runtime.InteropServices; // to open console
+
 
 namespace WindowsFormsApplication1
 {
@@ -20,6 +22,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             //MessageBox.Show("Main form loaded"); //working
             //MessageBox.Show(this.);
 
@@ -69,6 +72,21 @@ namespace WindowsFormsApplication1
         private void btndb1_Click(object sender, EventArgs e)
         {
             new db2().Show();
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            //call the ext1ControlClass
+            // not the optimal way
+
+            //groupBox1.se
+
+            if(rbCmd.Checked)
+                new ext1Control().runEvent("Cmd", txtCmd.Text);
+            else if (rbJava.Checked)
+                new ext1Control().runEvent("Java", txtCmd.Text);
+            if (rbPy.Checked)
+                new ext1Control().runEvent("py", txtCmd.Text);
         }
     }
 }

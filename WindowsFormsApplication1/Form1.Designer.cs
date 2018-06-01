@@ -40,16 +40,17 @@
             this.lblBtn5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnDate = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnRun = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbPy = new System.Windows.Forms.RadioButton();
-            this.rbCmd = new System.Windows.Forms.RadioButton();
             this.rbJava = new System.Windows.Forms.RadioButton();
+            this.rbCmd = new System.Windows.Forms.RadioButton();
+            this.rbPy = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCmd = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -147,8 +148,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -168,35 +169,6 @@
             this.tabPage1.Text = "tab1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(260, 223);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "CMD";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(260, 223);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Files";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(18, 31);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
             // btnDate
             // 
             this.btnDate.Location = new System.Drawing.Point(83, 57);
@@ -206,21 +178,36 @@
             this.btnDate.Text = "OK";
             this.btnDate.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // dateTimePicker1
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 0;
+            this.dateTimePicker1.Location = new System.Drawing.Point(18, 31);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 0;
             // 
-            // label1
+            // tabPage2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "command";
+            this.tabPage2.Controls.Add(this.btnRun);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.txtCmd);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(260, 223);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "CMD";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnRun
+            // 
+            this.btnRun.Location = new System.Drawing.Point(73, 154);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(75, 23);
+            this.btnRun.TabIndex = 3;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // groupBox1
             // 
@@ -233,16 +220,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // rbPy
+            // rbJava
             // 
-            this.rbPy.AutoSize = true;
-            this.rbPy.Location = new System.Drawing.Point(39, 10);
-            this.rbPy.Name = "rbPy";
-            this.rbPy.Size = new System.Drawing.Size(58, 17);
-            this.rbPy.TabIndex = 0;
-            this.rbPy.TabStop = true;
-            this.rbPy.Text = "Python";
-            this.rbPy.UseVisualStyleBackColor = true;
+            this.rbJava.AutoSize = true;
+            this.rbJava.Location = new System.Drawing.Point(39, 59);
+            this.rbJava.Name = "rbJava";
+            this.rbJava.Size = new System.Drawing.Size(48, 17);
+            this.rbJava.TabIndex = 2;
+            this.rbJava.Text = "Java";
+            this.rbJava.UseVisualStyleBackColor = true;
             // 
             // rbCmd
             // 
@@ -251,20 +237,45 @@
             this.rbCmd.Name = "rbCmd";
             this.rbCmd.Size = new System.Drawing.Size(45, 17);
             this.rbCmd.TabIndex = 1;
-            this.rbCmd.TabStop = true;
             this.rbCmd.Text = "cmd";
             this.rbCmd.UseVisualStyleBackColor = true;
             // 
-            // rbJava
+            // rbPy
             // 
-            this.rbJava.AutoSize = true;
-            this.rbJava.Location = new System.Drawing.Point(39, 59);
-            this.rbJava.Name = "rbJava";
-            this.rbJava.Size = new System.Drawing.Size(48, 17);
-            this.rbJava.TabIndex = 2;
-            this.rbJava.TabStop = true;
-            this.rbJava.Text = "Java";
-            this.rbJava.UseVisualStyleBackColor = true;
+            this.rbPy.AutoSize = true;
+            this.rbPy.Checked = true;
+            this.rbPy.Location = new System.Drawing.Point(39, 10);
+            this.rbPy.Name = "rbPy";
+            this.rbPy.Size = new System.Drawing.Size(58, 17);
+            this.rbPy.TabIndex = 0;
+            this.rbPy.TabStop = true;
+            this.rbPy.Text = "Python";
+            this.rbPy.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "command";
+            // 
+            // txtCmd
+            // 
+            this.txtCmd.Location = new System.Drawing.Point(73, 32);
+            this.txtCmd.Name = "txtCmd";
+            this.txtCmd.Size = new System.Drawing.Size(170, 20);
+            this.txtCmd.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(260, 223);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Files";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -316,10 +327,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbPy;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCmd;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RadioButton rbJava;
         private System.Windows.Forms.RadioButton rbCmd;
+        private System.Windows.Forms.Button btnRun;
     }
 }
 

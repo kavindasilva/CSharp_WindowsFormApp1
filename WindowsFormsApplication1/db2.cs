@@ -167,7 +167,32 @@ namespace WindowsFormsApplication1
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("DD");
+            //MessageBox.Show("DD"); //working... sometimes??
+            int rowIndex = dgv1.CurrentCell.RowIndex; Console.WriteLine(rowIndex.ToString());
+            //string examid= dgv1.CurrentCell.I
+            string examId=dgv1.Rows[rowIndex].Cells[0].Value.ToString();
+            Console.WriteLine(examId); //works. returns index no (col 0)
+
+            if (confirmEdit(examId))
+            {
+                //
+                Console.WriteLine("select edit");
+            }
+            else
+            {
+                Console.WriteLine("select NOT edit");
+            }
+        }
+
+
+        //user confirmation before editing
+        public bool confirmEdit(string indNo)
+        {
+            DialogResult conf = MessageBox.Show("Are you sure you want to edit index "+indNo+" results?", "Confirm edit!", MessageBoxButtons.YesNo);
+            if (conf==DialogResult.Yes)
+                return true;
+            else
+                return false;
         }
 
     } //end of db2 class_______________________________________
